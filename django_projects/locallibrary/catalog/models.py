@@ -94,3 +94,9 @@ class Tutorial(models.Model):
 
     def __str__(self):
         return f'{self.tutorial_title}, {self.tutorial_content}'
+    
+class Favorite(models.Model):
+    body = models.TextField()
+
+    def __str__(self):
+        return f'Favorite Quote #{self.id}'
