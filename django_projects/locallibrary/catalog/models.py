@@ -86,3 +86,11 @@ class Author(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.last_name}, {self.first_name}'
+
+class Tutorial(models.Model):
+    tutorial_title = models.CharField(max_length=200)
+    tutorial_content = models.TextField()
+    tutorial_published = models.DateTimeField("Date Published")
+
+    def __str__(self):
+        return f'{self.tutorial_title}, {self.tutorial_content}'
