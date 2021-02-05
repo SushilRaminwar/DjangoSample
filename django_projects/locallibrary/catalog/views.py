@@ -12,4 +12,7 @@ def homepage1(request):
     return HttpResponse("asdqwe")
 
 def add_favorite(request, quote):
-    return HttpResponse(quote)
+    #return HttpResponse(quote)
+    return render(request=request,
+                  template_name="catalog/favorite.html",
+                  context={"fav":Favorite.objects.all, "quote":quote})
